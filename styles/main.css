@@ -1,0 +1,102 @@
+body {
+  background: #59381B;
+  color: #E3B771;
+  font-family: sans-serif;
+}
+
+a {
+  color: #61C456;
+  text-decoration: underline;
+}
+
+a[aria-current="page"] {
+  background: #E3B771;
+  color: #59381B;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  background: #61C456;
+  color: #59381B;
+  border-radius: 4px;
+  outline: 2px solid #61C456;
+  outline-offset: 1px;
+  text-decoration: none;
+}
+
+a:active {
+  outline: 4px double #61C456;
+}
+
+a.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+a.skip-link:focus {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  width: auto;
+  height: auto;
+}
+
+header {
+  text-align: center;
+  border-bottom: 4px double #E3B771;
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 1.25em;
+  margin: 0.25em;
+}
+
+nav ul li:first-child {
+  display: block;
+  font-size: 2em;
+}
+
+nav ul li a {
+  padding: 0 0.5em;
+}
+
+p,
+li {
+  line-height: 1.5;
+}
+
+main {
+  text-align: left;
+  max-width: 30em;
+  margin: 0.5em auto;
+  outline: 0;
+}
+
+#main-photo {
+  text-align: center;
+}
+
+#main-photo img {
+  max-width: 100%;
+}
+
+#main-photo a {
+  display: inline-block;
+  background: none;
+}
