@@ -14,7 +14,7 @@ a {
 a[aria-current="page"] {
   background: #E3B771;
   color: #59381B;
-  border: 0.125em solid transparent;
+  border: 0.0625em solid transparent;
   border-radius: 0.25em;
   text-decoration: none;
 }
@@ -41,10 +41,10 @@ Border is just used to create a visual gap between an element and its box-shadow
 a la outline-offset, *except* for [aria-current="page"].
 */
   a {
-    border: none;
+    border-style: none;
   }
   a[aria-current="page"] {
-    border: 0.125em solid transparent;
+    border-style: solid;
   }
 }
 
@@ -82,7 +82,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   font-size: 1.25em;
-  margin: 0.25em;
+  margin: 0.125em;
 }
 
 nav ul li:first-child {
