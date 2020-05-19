@@ -8,44 +8,30 @@ body {
 a {
   color: #61C456;
   text-decoration: underline;
-  border: 0.0625em solid transparent;
+  border-style: none;
+  border-radius: 0.25em;
 }
 
 a[aria-current="page"] {
   background: #E3B771;
   color: #59381B;
-  border: 0.0625em solid transparent;
-  border-radius: 0.25em;
-  text-decoration: none;
+  text-decoration: underline overline transparent;
 }
 
 a:hover,
 a:focus {
   background: #61C456;
   color: #59381B;
-  border-radius: 0.25em;
-  border-color: #59381B;
-  outline: 2px solid transparent;
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px #61C456;
   text-decoration: none;
+  box-shadow: 0 0 0 0.0625rem #59381B,
+              0 0 0 0.1875rem #61C456;
+  outline: 0.1250em solid transparent;
+  outline-offset: 0.0625em;
 }
 
 a:active {
-  box-shadow: 0 0 0 4px #61C456;
-}
-
-@media screen and (-ms-high-contrast: active) {
-/*
-Border is just used to create a visual gap between an element and its box-shadow,
-a la outline-offset, *except* for [aria-current="page"].
-*/
-  a {
-    border-style: none;
-  }
-  a[aria-current="page"] {
-    border-style: solid;
-  }
+  box-shadow: 0 0 0 0.0625rem #59381B,
+              0 0 0 0.3125rem #61C456;
 }
 
 a.skip-link {
@@ -112,7 +98,7 @@ main {
 
 #main-photo a {
   border-radius: 0.50rem;
-  display: block;
+  display: inline-block;
   background: none;
 }
 
