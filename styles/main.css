@@ -1,37 +1,59 @@
+:root {
+  --bg-light: #E3B771;
+  --text-light: #59381B;
+  --link-light: #2A5425;
+
+  --bg-dark: #59381B;
+  --text-dark: #E3B771;
+  --link-dark: #61C456;
+
+  --background: var(--bg-dark);
+  --text: var(--text-dark);
+  --link: var(--link-dark);
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --background: var(--bg-light);
+    --text: var(--text-light);
+    --link: var(--link-light);
+  }
+}
+
 body {
-  background: #59381B;
-  color: #E3B771;
+  background-color: var(--background);
+  color: var(--text);
   font-family: 'Nunito', 'Open Sans', 'Helvetica', sans-serif;
   font-size: 1.0em;
 }
 
 a {
-  color: #61C456;
+  color: var(--link);
   text-decoration: underline;
   border-style: none;
   border-radius: 0.25em;
 }
 
 a[aria-current="page"] {
-  background: #E3B771;
-  color: #59381B;
+  background: var(--text);
+  color: var(--background);
   text-decoration: underline overline transparent;
 }
 
 a:hover,
 a:focus {
-  background: #61C456;
-  color: #59381B;
+  background: var(--link);
+  color: var(--background);
   text-decoration: none;
-  box-shadow: 0 0 0 0.0625rem #59381B,
-              0 0 0 0.1875rem #61C456;
+  box-shadow: 0 0 0 0.0625rem var(--background),
+              0 0 0 0.1875rem var(--link);
   outline: 0.1250em solid transparent;
   outline-offset: 0.0625em;
 }
 
 a:active {
-  box-shadow: 0 0 0 0.0625rem #59381B,
-              0 0 0 0.3125rem #61C456;
+  box-shadow: 0 0 0 0.0625rem var(--background),
+              0 0 0 0.3125rem var(--link);
 }
 
 a.skip-link {
